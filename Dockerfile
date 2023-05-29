@@ -7,8 +7,8 @@ ENV USER_ROOT=/root
 ENV gpu_arch=7.5
 
 # update apt and install python3.8 and pip3
-RUN apt-get update && apt-get install -y \
-    python3.8 python3-pip
+RUN DEBIAN_FRONTEND=noninteractive apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq python3.8 python3-pip
 
 # install jupyter notebook
 RUN pip3 install jupyter
