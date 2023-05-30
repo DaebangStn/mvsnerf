@@ -1,3 +1,19 @@
+## My contribution
+
+I created [docker image](https://hub.docker.com/r/daebangstn/mvsnerf/tags) which can run mvsnef on jupyter notebook.
+
+By following this [guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide),
+you can use cuda in docker container.
+
+```
+docker run -it -p 80:8888 --rm --rm --runtime=nvidia --gpus all daebangstn/mvsnerf:v2
+```
+
+render.ipynb and render-video.ipynb is the executing script.
+
+---------------------------
+## Original readme
+---------------------------
 # MVSNeRF
 ## [Project page](https://apchenstu.github.io/mvsnerf/) |  [Paper](https://arxiv.org/abs/2103.15595)
 This repository contains a pytorch lightning implementation for the ICCV 2021 paper: [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/abs/2103.15595). Our work present a novel neural rendering approach that can efficiently reconstruct
