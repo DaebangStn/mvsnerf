@@ -28,6 +28,9 @@ ENV IABN_FORCE_CUDA=1
 # inplace-abn is not needed, but it is not installed by the original MVSNeRF
 RUN pip install inplace-abn
 
+# libGL.so.1 is needed for cv2
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq ffmpeg libsm6 libxext6
+
 # copy source code
 COPY . $MVSNERF_ROOT
 
